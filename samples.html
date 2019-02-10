@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+<div align="center">
+<h2>Sample Dialog for the 2D-shape Layout task and the COCO Layout task</h2>
+<br />
+<div class="row" align="center">
+  <div class="column" style="width:15%">
+  </div>
+  <div class="column">
+    <img src="img/chat-2D-pattern-12447-good.png" alt="2D-shape" style="width:100%">
+  </div>
+  <div class="column" style="width:7%">
+  </div>
+  <div class="column">
+    <img src="img/chat-COCO-409707-good-1.png" alt="COCO" style="width:100%">
+  </div>
+</div>
+<p></p>
+</body>
+</html>
