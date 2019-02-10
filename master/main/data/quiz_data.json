@@ -1,0 +1,221 @@
+{
+    "2Dshape": {
+        "agent": [
+            {
+                "Q": "Given the chat history (canvas and instructions) above, select all the operation needed for the drawing tasks?",
+                "C": [
+                    [
+                        1,
+                        "Add a new object"
+                    ],
+                    [
+                        2,
+                        "Move an object"
+                    ],
+                    [
+                        3,
+                        "Delete an object"
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "1",
+                    "2"
+                ],
+                "DATA": [
+                    "https://s3.amazonaws.com/crowdflower-make-cloud/images%2F1520950233906-Screen+Shot+2018-03-13+at+10.06.40+AM.png"
+                ]
+            },
+            {
+                "Q": "Given the canvas on the left of UI above, choose all that are applicable based on the instruction \"draw a yellow circle next to the squares.\"",
+                "C": [
+                    [
+                        1,
+                        "Draw a yellow circle on the canvas."
+                    ],
+                    [
+                        2,
+                        "Ask instructor \"What are the location of yellow circle relative to the squares? Left, right, up or down?\""
+                    ],
+                    [
+                        3,
+                        "Ask instructor \"What do you mean?\""
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "2"
+                ]
+            }
+        ],
+        "user": [
+            {
+                "Q": "Given a chat history (canvas and instructions), choose all the helpful instructions.",
+                "C": [
+                    [
+                        1,
+                        "\"Good job so far. Thanks!\""
+                    ],
+                    [
+                        2,
+                        "\"You need to move all the squares not just the middle one. And then draw a red rectangle below the middle square.\""
+                    ],
+                    [
+                        3,
+                        "\"There are five shapes in total in the painting, three squares, one circle and one triangle.\""
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "2"
+                ],
+                "DATA": [
+                    "https://s3.amazonaws.com/crowdflower-make-cloud/images%2F1520960806371-Screen+Shot+2018-03-13+at+1.01.32+PM.png"
+                ]
+            },
+            {
+                "Q": "Which instructions would result in the same painting as the instruction \"Move the squares up because you need to draw a red triangle below the middle square. \", ",
+                "C": [
+                    [
+                        1,
+                        "\"Draw a triangle below the green row.\""
+                    ],
+                    [
+                        2,
+                        "\"There is a red triangle right below the middle square in the row. But you need to move the squares first.\""
+                    ],
+                    [
+                        3,
+                        "\"Paint one red triangle and place it underneath the squares.\""
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "2"
+                ]
+            }
+        ]
+    },
+    "COCO": {
+        "agent": [
+            {
+                "Q": "Given a chat history (canvas and instructions), select all the operations needed for the last two instructions?",
+                "C": [
+                    [
+                        1,
+                        "Resize an object"
+                    ],
+                    [
+                        2,
+                        "Move an object"
+                    ],
+                    [
+                        3,
+                        "Add an object"
+                    ],
+                    [
+                        4,
+                        "Delete an object"
+                    ]
+                ],
+                "A": [
+                    "1",
+                    "2"
+                ],
+                "DATA": [
+                    "https://s3.amazonaws.com/crowdflower-make-cloud/images%2F1521160431737-Screen+Shot+2018-03-15+at+8.21.06+PM.png"
+                ]
+            },
+            {
+                "Q": "Choose all that are applicable given a new instruction \"draw a surfer\"",
+                "C": [
+                    [
+                        1,
+                        "Draw a person and a surfboard."
+                    ],
+                    [
+                        2,
+                        "Ask instructor \"Where shall I draw the surfer?\""
+                    ],
+                    [
+                        3,
+                        "Ask instructor \"What do you mean?\""
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "2"
+                ]
+            }
+        ],
+        "user": [
+            {
+                "Q": "Given a chat history (canvas and instructions), choose all the instructions that are helpful.",
+                "C": [
+                    [
+                        1,
+                        "\"You need to move the person and the dog down to the bottom.\""
+                    ],
+                    [
+                        2,
+                        "\"The size of the person is bigger than the dog. Please adjust the size of the dog.\""
+                    ],
+                    [
+                        3,
+                        "\"You didn't understand the previous instruction?!\""
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "1",
+                    "2"
+                ],
+                "DATA": [
+                    "https://s3.amazonaws.com/crowdflower-make-cloud/images%2F1521158374959-Screen+Shot+2018-03-15+at+7.58.37+PM.png"
+                ]
+            },
+            {
+                "Q": "Assuming the painter has improved the drawing of the runner and the dog, which one could be the next instruction?",
+                "C": [
+                    [
+                        1,
+                        "\"Glad that you have successfully improved the drawing! Great job!\""
+                    ],
+                    [
+                        2,
+                        "\"Next, please draw a surfer at the background. Draw a surfboard under the surfer.\""
+                    ],
+                    [
+                        3,
+                        "\"The layout of the image is complete!\""
+                    ],
+                    [
+                        4,
+                        "None of above."
+                    ]
+                ],
+                "A": [
+                    "2"
+                ]
+            }
+        ]
+    }
+}

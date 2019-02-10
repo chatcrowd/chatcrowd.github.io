@@ -1,0 +1,16 @@
+{
+  "domain-name": "vision-dialog-COCO",
+  "domain-db": {
+    "db-name": "layout-COCO",
+    "coll_domain_data": "data",
+    "coll_chat_data": "chatdata",
+    "coll_chat_data_cache": "chatdata_cache",
+    "coll_cf_dispatch_semaphore": "cf_dispatch_semaphore",
+    "coll_chat_data_test": "testchatdata",
+    "coll_cf_data": "chatcf",
+    "coll_cf_data_test": "testchatcf",
+    "coll_anno_data": "anno_data",
+    "coll_anno_data_test": "test_anno_data"
+  },
+  "app-name": "vision-dialog-COCO"
+}
