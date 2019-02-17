@@ -7,6 +7,19 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" media="screen,projection">
+
+  <script>
+         //$(document).ready(function() {
+          //  $('myselect').material_select();
+         //});
+
+         //$("#myselect").change(function() {
+          //console.log($('select#myselect').val());
+          //});
+
+          var e = document.getElementById("myselect");
+          var strUser = e.options[e.selectedIndex].value
+  </script>
 </head>
 <body>
 	<!-- <a href="https://github.com/uvavision/chat-crowd/tree/website"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a> -->
@@ -43,7 +56,7 @@
             <h2 class="center light-teal-text"><i class="medium material-icons">group</i></h2>
             <h5 class="center">Multiple Crowdsourcing Mode</h5>
 
-            <p class="light">Integrated with crowdsourcing platforms for both synchronous and asynchronous data collection </p>
+            <p class="light">Integrated with crowdsourcing platforms for both synchronous and asynchronous data collection. </p>
           </div>
         </div>
 
@@ -64,22 +77,69 @@
       <div class="col s8 m6">
         <div class="card">
           <div class="card-content">
-            <p>Task: 2D-shape Layout</p>
+            <p>Task: 2D-shape Layout (please select one taskId)
+            <div class = "row">
+               <!-- <form> -->
+                   <select class = "browser-default"  id="select2D">
+                      <!-- <option value = "0" disabled selected>Select Task ID</option> -->
+                      <option value = "12445">12445</option>
+                      <option value = "12348">12348</option>
+                      <option value = "12394">12394</option>
+                      <option value = "12352">12352</option>
+                      <option value = "12369">12369</option>
+                   </select>
+               <!-- </form> -->
+            </div>
+
+            <script>
+                function redirect2D(opt)
+                {
+                    var e = document.getElementById("select2D");
+                    var id2d = e.options[e.selectedIndex].value
+
+                    var e = document.getElementById("selectCOCO");
+                    var idcoco = e.options[e.selectedIndex].value
+
+                    if (opt == 0)
+                      window.open("http://vision.cs.virginia.edu:8080//login?role=user&task_id=" + id2d + "&workerid=test123&username=Guest2&mode=2Dshape&debug=1", "_blank")
+                    if (opt == 1)
+                      window.open("http://vision.cs.virginia.edu:8080//login?role=agent&task_id=" + id2d + "&workerid=test123&username=Guest1&mode=2Dshape&debug=1", "_blank")
+                    if (opt == 2)
+                      window.open("http://vision.cs.virginia.edu:8080//login?role=user&task_id=" + idcoco + "&workerid=test123&username=Guest2&mode=COCO&debug=1", "_blank")
+                    if (opt == 3)
+                      window.open("http://vision.cs.virginia.edu:8080//login?role=agent&task_id=" + idcoco + "&workerid=test123&username=Guest1&mode=COCO&debug=1", "_blank")
+                }
+            </script>
+
+            </p>
           </div>
           <div class="card-image orange">
             <img src="https://camo.githubusercontent.com/c6b8bc29903903090f75f7b22c908c8703fc2031/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f63726f7764666c6f7765722d696e73742d696d67732f324473686170652f696e7374727563746f722e676966">
             <!-- <span class="card-title orange-text">2D shape task</span> -->
           </div>
           <div class="card-action">
-            <a class="btn orange" target="_blank" href="http://vision.cs.virginia.edu:8080//login?role=user&task_id=12348&workerid=test123&username=Guest2&mode=2Dshape&debug=1">Play Instructor</a>
-            <a class="btn orange" target="_blank" href="http://vision.cs.virginia.edu:8080//login?role=agent&task_id=12348&workerid=test123&username=Guest1&mode=2Dshape&debug=1">Play Painter</a>
+            <a class="btn orange" target="_blank" onclick="redirect2D(0)" href="#">Play Instructor</a>
+            <a class="btn orange" target="_blank" onclick="redirect2D(1)" href="#">Play Painter</a>
           </div>
         </div>
       </div>
       <div class="col s8 m6">
         <div class="card">
           <div class="card-content">
-            <p>Task: COCO Layout</p>
+            <p>Task: COCO Layout  (please select one taskId)
+              <div class = "row">
+                 <!-- <form> -->
+                     <select class = "browser-default"  id="selectCOCO">
+                        <!-- <option value = "0" disabled selected>Select Task ID</option> -->
+                        <option value = "287666">287666</option>
+                        <option value = "62652">62652</option>
+                        <option value = "319714">319714</option>
+                        <option value = "409707">409707</option>
+                        <option value = "556500">556500</option>
+                     </select>
+                 <!-- </form> -->
+              </div>
+            </p>
           </div>
           <div class="card-image">
 		  <img src="https://camo.githubusercontent.com/3908e3a68a56e332d9ad33a98464ff2f7567e520/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f63726f7764666c6f7765722d696e73742d696d67732f434f434f2f64726177696e67746f6f6c2e676966">
@@ -87,14 +147,16 @@
           </div>
 
           <div class="card-action">
-            <a class="btn orange" target="_blank" href="http://vision.cs.virginia.edu:8080//login?role=user&task_id=409707&workerid=test123&username=Guest2&mode=COCO&debug=1">Play Instructor</a>
-            <a class="btn orange" target="_blank" href="http://vision.cs.virginia.edu:8080//login?role=agent&task_id=409707&workerid=test123&username=Guest1&mode=COCO&debug=1">Play Painter</a>
+            <a class="btn orange" target="_blank" onclick="redirect2D(2)" href="#">Play Instructor</a>
+            <a class="btn orange" target="_blank" onclick="redirect2D(3)" href="#">Play Painter</a>
           </div>
         </div>
       </div>
   </div>
 
-  </div> 
+  </div>
+
+
 
 
 
